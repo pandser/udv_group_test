@@ -39,7 +39,7 @@ def get_interface_status(obj: Type[ConnectHandler]) -> str:
     '''Сведения об интерфейсах.'''
     return obj.send_command('sh ip int brief')
 
-def main():
+def main() -> None:
     try:
         comands = [
                 get_version, 
