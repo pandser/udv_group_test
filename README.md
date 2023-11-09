@@ -1,12 +1,19 @@
 ## Скрипт сбора сведений с коммутатора
 
-Запуск через Docker-контейнер:
+Запуск скрипта
 
 ```
-sudo docker build -t <имя образа> .
+./run.sh
 ```
 
+Пример  файла .env
 ```
-sudo docker run -v <путь к текущему каталогу>/report/:/app/report <имя образа> python3 main.py
+SWITCH="{
+    'device_type': 'cisco_ios_telnet',
+    'host': '192.168.1.1',
+    'username': 'admin',
+    'password': 'admin'
+    }"
 ```
+
 Результат выгружается в файл report.txt в папке report
