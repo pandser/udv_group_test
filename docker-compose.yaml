@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+
+  main:
+    build: .
+    network_mode: host
+    volumes:
+      - myapp:/app/report
+    env_file: 
+      - ./.env
+
+volumes:
+  myapp:
+    external: true
